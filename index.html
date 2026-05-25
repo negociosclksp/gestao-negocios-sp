@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'DM Sans',sans-serif;background:#f4f6fb;color:#1a1f36;min-height:100vh;}
-
+ 
 /* HEADER */
 .header{background:#fff;border-bottom:1px solid #e0e4ef;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,.06);}
 .header-brand{display:flex;align-items:center;gap:10px;}
@@ -16,10 +16,10 @@ body{font-family:'DM Sans',sans-serif;background:#f4f6fb;color:#1a1f36;min-heigh
 .header-brand h1{font-size:15px;font-weight:600;}
 .header-brand span{font-size:12px;color:#8b92b0;margin-left:4px;}
 .last-update{font-family:'DM Mono',monospace;font-size:11px;color:#8b92b0;background:#f0f2f8;border:1px solid #e0e4ef;padding:3px 10px;border-radius:20px;}
-
+ 
 /* LAYOUT */
 .app-body{display:flex;}
-
+ 
 /* SIDEBAR */
 .sidebar{width:210px;min-width:210px;background:#fff;border-right:1px solid #e0e4ef;padding:1rem 0;position:sticky;top:60px;height:calc(100vh - 60px);overflow-y:auto;}
 .sidebar-label{font-size:10px;font-weight:700;color:#8b92b0;text-transform:uppercase;letter-spacing:.1em;padding:6px 16px 4px;}
@@ -30,14 +30,14 @@ body{font-family:'DM Sans',sans-serif;background:#f4f6fb;color:#1a1f36;min-heigh
 .sidebar-divider{height:1px;background:#e0e4ef;margin:8px 16px;}
 .sidebar-subnav{display:none;}
 .sidebar-subnav .sidebar-label{color:#a0a8c0;}
-
+ 
 /* CONTENT */
 .content-area{flex:1;min-width:0;padding:1.5rem;}
-
+ 
 /* PANELS */
 .panel{display:none;}
 .panel.active{display:block;}
-
+ 
 /* SUMMARY CARDS */
 .summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:1.5rem;}
 .card{background:#fff;border:1px solid #e0e4ef;border-radius:12px;padding:1.1rem 1.3rem;position:relative;overflow:hidden;}
@@ -46,14 +46,14 @@ body{font-family:'DM Sans',sans-serif;background:#f4f6fb;color:#1a1f36;min-heigh
 .card-label{font-size:11px;font-weight:600;color:#8b92b0;text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px;}
 .card-value{font-size:26px;font-weight:700;color:#1a1f36;line-height:1;margin-bottom:3px;}
 .card-sub{font-size:12px;color:#8b92b0;}
-
+ 
 /* BADGES */
 .badge{display:inline-flex;align-items:center;gap:3px;padding:3px 8px;border-radius:20px;font-size:11px;font-weight:600;}
 .badge.green{background:#d1fae5;color:#065f46;}
 .badge.amber{background:#fef3c7;color:#92400e;}
 .badge.blue{background:#dbeafe;color:#1e40af;}
 .badge.gray{background:#e5e7eb;color:#4b5563;}
-
+ 
 /* TABLE */
 .table-wrap{background:#fff;border:1px solid #e0e4ef;border-radius:12px;overflow:hidden;}
 .table-toolbar{display:flex;align-items:center;gap:10px;padding:.9rem 1.2rem;border-bottom:1px solid #e0e4ef;flex-wrap:wrap;}
@@ -68,25 +68,27 @@ tbody tr:hover{background:#f8faff;}
 tbody td{padding:11px 14px;vertical-align:middle;}
 .drt-mono{font-family:'DM Mono',monospace;font-size:11px;color:#8b92b0;}
 .empty-msg{text-align:center;padding:2.5rem;color:#8b92b0;font-size:14px;}
-
+ 
 /* TIMELINE */
 .section-title{font-size:13px;font-weight:600;color:#4a5272;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1rem;}
 .timeline-container{background:#fff;border:1px solid #e0e4ef;border-radius:12px;overflow:hidden;}
 .tl-header-row{display:grid;background:#f4f6fb;border-bottom:1px solid #e0e4ef;font-size:11px;font-weight:500;color:#8b92b0;text-transform:uppercase;letter-spacing:.06em;}
-.tl-row{display:grid;border-bottom:1px solid #e0e4ef;align-items:center;min-height:54px;transition:background .1s;}
+.tl-row{display:grid;border-bottom:1px solid #e0e4ef;align-items:center;min-height:62px;transition:background .1s;}
 .tl-row:last-child{border-bottom:none;}
 .tl-row:hover{background:#f8faff;}
 .tl-name{padding:0 1rem;display:flex;flex-direction:column;gap:2px;}
 .tl-name strong{font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .tl-name span{font-size:11px;color:#8b92b0;}
-.tl-chart{padding:6px 10px;position:relative;height:54px;display:flex;align-items:center;}
-.tl-bar{position:absolute;height:18px;border-radius:4px;cursor:pointer;transition:opacity .15s;}
+.tl-chart{padding:6px 10px;position:relative;height:62px;display:flex;align-items:center;}
+.tl-bar{position:absolute;height:16px;border-radius:4px;cursor:pointer;transition:opacity .15s;top:8px;}
 .tl-bar:hover{opacity:.8;}
-.tl-bar.p2{margin-top:22px;}
+.tl-bar.p2{top:32px;}
+.tl-bar-label{position:absolute;font-size:9px;font-weight:600;color:#4a5272;white-space:nowrap;pointer-events:none;top:26px;letter-spacing:.02em;}
+.tl-bar-label.p2{top:50px;}
 .month-tick{position:absolute;top:0;bottom:0;width:1px;background:#e0e4ef;pointer-events:none;}
 .month-label{position:absolute;top:3px;font-size:10px;color:#8b92b0;font-family:'DM Mono',monospace;pointer-events:none;transform:translateX(-50%);}
 .today-line{position:absolute;top:0;bottom:0;width:2px;background:#dc2626;opacity:.6;pointer-events:none;z-index:5;}
-
+ 
 /* CALENDAR */
 .cal-controls{display:flex;align-items:center;gap:14px;margin-bottom:1.2rem;flex-wrap:wrap;}
 .btn-nav{background:#fff;border:1px solid #e0e4ef;border-radius:8px;padding:5px 11px;color:#4a5272;cursor:pointer;font-size:16px;transition:all .1s;}
@@ -103,7 +105,7 @@ tbody td{padding:11px 14px;vertical-align:middle;}
 .cal-date{font-size:12px;font-weight:500;color:#4a5272;margin-bottom:3px;display:flex;align-items:center;justify-content:space-between;}
 .today-badge{background:#2563eb;color:#fff;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;}
 .cal-event{font-size:9px;font-weight:600;padding:2px 5px;border-radius:3px;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;}
-
+ 
 /* ANIVERSÁRIO CARDS */
 .aniv-cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;}
 .aniv-card{background:#fff;border:1px solid #e0e4ef;border-radius:14px;padding:1.2rem;display:flex;flex-direction:column;gap:9px;position:relative;overflow:hidden;transition:box-shadow .15s;}
@@ -117,7 +119,7 @@ tbody td{padding:11px 14px;vertical-align:middle;}
 .aniv-bday{font-size:11px;color:#8b92b0;margin-top:2px;}
 .aniv-info-row{display:flex;align-items:center;justify-content:space-between;font-size:12px;color:#4a5272;border-top:1px solid #e0e4ef;padding-top:9px;}
 .aniv-comment{font-size:11px;color:#8b92b0;font-style:italic;border-top:1px solid #e0e4ef;padding-top:7px;line-height:1.4;}
-
+ 
 /* ANIV YEAR */
 .aniv-year-track{background:#fff;border:1px solid #e0e4ef;border-radius:12px;padding:1.5rem;overflow-x:auto;}
 .ayt-months{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;min-width:700px;}
@@ -126,18 +128,18 @@ tbody td{padding:11px 14px;vertical-align:middle;}
 .ayt-month.current .ayt-month-label{color:#2563eb;border-bottom-color:#2563eb;}
 .ayt-person{border-radius:7px;padding:6px 4px;font-size:11px;font-weight:600;text-align:center;cursor:pointer;line-height:1.3;}
 .ayt-day{font-size:9px;opacity:.8;display:block;margin-top:1px;}
-
+ 
 /* TOOLTIP */
 .tooltip{position:fixed;background:#fff;border:1px solid #e0e4ef;border-radius:10px;padding:9px 13px;font-size:12px;color:#1a1f36;pointer-events:none;z-index:9999;box-shadow:0 4px 16px rgba(0,0,0,.1);max-width:220px;display:none;}
 .tooltip strong{color:#2563eb;display:block;margin-bottom:3px;font-size:13px;}
 .tooltip .tip-row{color:#4a5272;margin:2px 0;}
 .tooltip .tip-row span{color:#1a1f36;}
-
+ 
 ::-webkit-scrollbar{width:6px;height:6px;}
 ::-webkit-scrollbar-track{background:#f4f6fb;}
 ::-webkit-scrollbar-thumb{background:#c7cce0;border-radius:3px;}
 </style>
-
+ 
 <script>
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then(regs => {
@@ -149,14 +151,14 @@ tbody td{padding:11px 14px;vertical-align:middle;}
 </script>
 </head>
 <body>
-
+ 
 <div class="tooltip" id="tooltip">
   <strong id="tip-name"></strong>
   <div class="tip-row">Período: <span id="tip-period"></span></div>
   <div class="tip-row">Cargo: <span id="tip-cargo"></span></div>
   <div class="tip-row">Obs: <span id="tip-obs"></span></div>
 </div>
-
+ 
 <header class="header">
   <div class="header-brand">
     <div class="logo">📅</div>
@@ -167,9 +169,9 @@ tbody td{padding:11px 14px;vertical-align:middle;}
   </div>
   <div class="last-update" id="last-update">Carregando...</div>
 </header>
-
+ 
 <div class="app-body">
-
+ 
   <nav class="sidebar">
     <div class="sidebar-label">Menu</div>
     <div class="sidebar-item active" id="nav-ferias" onclick="switchSection('ferias')">
@@ -178,9 +180,9 @@ tbody td{padding:11px 14px;vertical-align:middle;}
     <div class="sidebar-item" id="nav-aniversario" onclick="switchSection('aniversario')">
       <span class="icon">🎂</span><span>Folga Aniversário</span>
     </div>
-
+ 
     <div class="sidebar-divider"></div>
-
+ 
     <div class="sidebar-subnav" id="ferias-subnav">
       <div class="sidebar-label">Férias — Visões</div>
       <div class="sidebar-item" id="tab-timeline" onclick="switchTab('timeline')">
@@ -193,7 +195,7 @@ tbody td{padding:11px 14px;vertical-align:middle;}
         <span class="icon">📋</span><span>Tabela</span>
       </div>
     </div>
-
+ 
     <div class="sidebar-subnav" id="aniversario-subnav">
       <div class="sidebar-label">Folga Aniversário — Visões</div>
       <div class="sidebar-item" id="tab-aniv-cards" onclick="switchTab('aniv-cards')">
@@ -207,18 +209,18 @@ tbody td{padding:11px 14px;vertical-align:middle;}
       </div>
     </div>
   </nav>
-
+ 
   <div class="content-area">
-
+ 
     <div class="panel" id="panel-timeline">
       <div class="summary-grid" id="summary-cards"></div>
-      <div class="section-title">Cronograma Anual — Nov 2025 a Nov 2026</div>
+      <div class="section-title">Cronograma Anual — Dez 2025 a Ago 2026</div>
       <div class="timeline-container">
         <div class="tl-header-row" id="tl-header"></div>
         <div id="tl-rows"></div>
       </div>
     </div>
-
+ 
     <div class="panel" id="panel-calendario">
       <div class="cal-controls">
         <div style="display:flex;align-items:center;gap:8px;">
@@ -233,7 +235,7 @@ tbody td{padding:11px 14px;vertical-align:middle;}
       <div class="calendar-grid" id="calendar-grid"></div>
       <div style="margin-top:1rem;display:flex;gap:12px;flex-wrap:wrap;" id="cal-legend"></div>
     </div>
-
+ 
     <div class="panel" id="panel-tabela">
       <div class="table-wrap">
         <div class="table-toolbar">
@@ -263,12 +265,12 @@ tbody td{padding:11px 14px;vertical-align:middle;}
         </table>
       </div>
     </div>
-
+ 
     <div class="panel" id="panel-aniv-cards">
       <div class="summary-grid" id="aniv-summary"></div>
       <div class="aniv-cards-grid" id="aniv-cards-grid"></div>
     </div>
-
+ 
     <div class="panel" id="panel-aniv-tabela">
       <div class="table-wrap">
         <div class="table-toolbar">
@@ -289,15 +291,15 @@ tbody td{padding:11px 14px;vertical-align:middle;}
         </table>
       </div>
     </div>
-
+ 
     <div class="panel" id="panel-aniv-timeline">
       <div class="section-title">Aniversários ao longo do ano</div>
       <div class="aniv-year-track" id="aniv-year-track"></div>
     </div>
-
+ 
   </div>
 </div>
-
+ 
 <script>
 // ── DADOS FÉRIAS ──────────────────────────────────────────────────────────────
 // LAST_UPDATE: @@LAST_UPDATE@@
@@ -305,13 +307,13 @@ const INLINE_DATA = [
 // @@DATA_START@@
 {DRT:'9003013508',NOME:'CAMILA CRISTINE DE MORAES BARBOZA',CARGO:'ANALISTA',FERIAS1_INICIO:'2025-12-22',FERIAS1_FIM:'2026-01-10',FERIAS2_INICIO:'',FERIAS2_FIM:'',OBS:'20 DIAS',dias_pendentes:0,AGENDADA:'SIM'},
 {DRT:'9003009273',NOME:'CAROLINA RIBEIRO DE ANDRADE',CARGO:'ANALISTA',FERIAS1_INICIO:'2026-01-12',FERIAS1_FIM:'2026-02-10',FERIAS2_INICIO:'',FERIAS2_FIM:'',OBS:'30 DIAS',dias_pendentes:0,AGENDADA:'SIM'},
-{DRT:'9003000517',NOME:'BRUNO GREGIO SARAIVA',CARGO:'ANALISTA',FERIAS1_INICIO:'2025-04-20',FERIAS1_FIM:'2025-05-09',FERIAS2_INICIO:'',FERIAS2_FIM:'',OBS:'VENDER 10 DIAS',dias_pendentes:0,AGENDADA:'SIM'},
+{DRT:'9003000517',NOME:'BRUNO GREGIO SARAIVA',CARGO:'ANALISTA',FERIAS1_INICIO:'2026-04-20',FERIAS1_FIM:'2026-05-09',FERIAS2_INICIO:'',FERIAS2_FIM:'',OBS:'VENDER 10 DIAS',dias_pendentes:0,AGENDADA:'SIM'},
 {DRT:'9003001695',NOME:'MATHEUS CAMARGO DE OLIVEIRA LOPES',CARGO:'ANALISTA',FERIAS1_INICIO:'2026-05-25',FERIAS1_FIM:'2026-06-24',FERIAS2_INICIO:'',FERIAS2_FIM:'',OBS:'30 DIAS',dias_pendentes:4,AGENDADA:'SIM'},
 {DRT:'9003000777',NOME:'SAMUEL ANTONIO PINTO',CARGO:'ANALISTA',FERIAS1_INICIO:'2026-07-06',FERIAS1_FIM:'2026-08-04',FERIAS2_INICIO:'',FERIAS2_FIM:'',OBS:'30 DIAS',dias_pendentes:0,AGENDADA:'SIM'},
-{DRT:'9003000169',NOME:'FERNANDO SOUZA FRANCO',CARGO:'GERENTE',FERIAS1_INICIO:'2026-01-05',FERIAS1_FIM:'2026-01-19',FERIAS2_INICIO:'2025-06-29',FERIAS2_FIM:'2025-07-13',OBS:'15 + 15',dias_pendentes:11,AGENDADA:'SIM'},
+{DRT:'9003000169',NOME:'FERNANDO SOUZA FRANCO',CARGO:'GERENTE',FERIAS1_INICIO:'2026-01-05',FERIAS1_FIM:'2026-01-19',FERIAS2_INICIO:'2026-06-29',FERIAS2_FIM:'2026-07-13',OBS:'15 + 15',dias_pendentes:11,AGENDADA:'SIM'},
 // @@DATA_END@@
 ];
-
+ 
 // ── DADOS ANIVERSÁRIO ────────────────────────────────────────────────────────
 // ANIV_LAST_UPDATE: @@ANIV_LAST_UPDATE@@
 const ANIV_DATA = [
@@ -324,12 +326,12 @@ const ANIV_DATA = [
 {NOME:'FERNANDO SOUZA FRANCO',ANIVERSARIO:'1981-12-26',MES:'DEZEMBRO',STATUS:'ANIVERSÁRIO A FAZER',DATA_FOLGA:'',COMENTARIOS:''},
 // @@ANIV_DATA_END@@
 ];
-
+ 
 // ── ESTADO ───────────────────────────────────────────────────────────────────
 let employees = [];
 let sortCol = 'NOME', sortDir = 1;
 let calYear, calMonth;
-
+ 
 const COLORS = [
   {bg:'#2563eb',text:'#eff6ff'},{bg:'#7c3aed',text:'#f5f3ff'},
   {bg:'#059669',text:'#ecfdf5'},{bg:'#d97706',text:'#fffbeb'},
@@ -341,10 +343,10 @@ const AVATAR_COLORS = [
   {bg:'#d1fae5',text:'#065f46'},{bg:'#fef3c7',text:'#92400e'},
   {bg:'#fce7f3',text:'#9d174d'},{bg:'#e0f2fe',text:'#075985'},
 ];
-
+ 
 function getColor(i){ return COLORS[i % COLORS.length]; }
 function getAvatarColor(i){ return AVATAR_COLORS[i % AVATAR_COLORS.length]; }
-
+ 
 // ── HELPERS ───────────────────────────────────────────────────────────────────
 function toDate(s){ if(!s) return null; const [y,m,d]=s.split('-').map(Number); return new Date(y,m-1,d); }
 function fmtDate(s){ if(!s) return '—'; const d=toDate(s); return d.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit',year:'numeric'}); }
@@ -352,7 +354,7 @@ function fmtBday(s){ if(!s) return '—'; const d=toDate(s); return d.toLocaleDa
 function nomeCurto(n){ if(!n) return ''; const p=n.trim().split(' '); return p[0]+(p.length>1?' '+p[p.length-1]:''); }
 function daysBetween(a,b){ return Math.round((b-a)/(1000*60*60*24))+1; }
 function initials(n){ const p=n.trim().split(' '); return (p[0][0]+(p[p.length-1][0])).toUpperCase(); }
-
+ 
 // ── NAVEGAÇÃO ─────────────────────────────────────────────────────────────────
 function switchSection(name){
   document.querySelectorAll('.sidebar-item[id^="nav-"]').forEach(t=>t.classList.remove('active'));
@@ -363,7 +365,7 @@ function switchSection(name){
   const firstTab = sub && sub.querySelector('.sidebar-item');
   if(firstTab){ switchTab(firstTab.id.replace('tab-','')); }
 }
-
+ 
 function switchTab(name){
   document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
   const panel = document.getElementById('panel-'+name);
@@ -376,7 +378,7 @@ function switchTab(name){
   if(name==='aniv-timeline') renderAnivTimeline();
   window.scrollTo(0,0);
 }
-
+ 
 // ── TOOLTIP ───────────────────────────────────────────────────────────────────
 function showTip(e,name,period,cargo,obs){
   const t=document.getElementById('tooltip');
@@ -395,7 +397,7 @@ function showTipSimple(e,text){
 function moveTip(e){ const t=document.getElementById('tooltip'); t.style.left=(e.clientX+14)+'px'; t.style.top=(e.clientY+14)+'px'; }
 function hideTip(){ document.getElementById('tooltip').style.display='none'; }
 document.addEventListener('mousemove',moveTip);
-
+ 
 // ── FÉRIAS: SUMMARY ───────────────────────────────────────────────────────────
 function renderSummary(){
   const today=new Date(); today.setHours(0,0,0,0);
@@ -422,10 +424,10 @@ function renderSummary(){
       <div class="card-sub">${c.sub}</div>
     </div>`).join('');
 }
-
+ 
 // ── FÉRIAS: TIMELINE ──────────────────────────────────────────────────────────
 function renderTimeline(){
-  const TL_START=new Date(2025,10,1), TL_END=new Date(2026,10,30);
+  const TL_START=new Date(2025,11,1), TL_END=new Date(2026,7,31);
   const totalDays=daysBetween(TL_START,TL_END);
   const today=new Date(); today.setHours(0,0,0,0);
   const NAME_W=180;
@@ -452,9 +454,13 @@ function renderTimeline(){
       if(!sd||!fd) return '';
       const w=pctW(sd,fd);
       if(parseFloat(w)<=0) return '';
-      return `<div class="tl-bar ${cls}" style="left:${pct(sd)}%;width:${w}%;background:${col.bg};"
+      const now=new Date(); now.setHours(0,0,0,0);
+      const label = now>fd ? 'Realizada' : now>=sd ? '🏖 Em férias' : 'Programada';
+      const opacity = now>fd ? '0.55' : '1';
+      return `<div class="tl-bar ${cls}" style="left:${pct(sd)}%;width:${w}%;background:${col.bg};opacity:${opacity};"
         onmouseenter="showTip(event,'${e.NOME}','${fmtDate(s)} → ${fmtDate(f)}','${e.CARGO}','${e.OBS}')"
-        onmouseleave="hideTip()"></div>`;
+        onmouseleave="hideTip()"></div>
+        <div class="tl-bar-label ${cls}" style="left:${pct(sd)}%">${label}</div>`;
     }
     return `<div class="tl-row" style="${gs}">
       <div class="tl-name"><strong>${nomeCurto(e.NOME)}</strong><span>${e.CARGO}</span></div>
@@ -467,7 +473,7 @@ function renderTimeline(){
     </div>`;
   }).join('');
 }
-
+ 
 // ── FÉRIAS: TABELA ────────────────────────────────────────────────────────────
 function renderTable(){
   const search=(document.getElementById('search-input')?.value||'').toLowerCase();
@@ -498,7 +504,7 @@ function renderTable(){
 }
 function filterTable(){ renderTable(); }
 function sortTable(col){ sortCol===col?sortDir*=-1:(sortCol=col,sortDir=1); renderTable(); }
-
+ 
 // ── FÉRIAS: CALENDÁRIO ────────────────────────────────────────────────────────
 function populateCalFilter(){
   const sel=document.getElementById('cal-filter');
@@ -550,7 +556,7 @@ function renderCalendar(){
     (filterName?employees.filter(e=>e.NOME===filterName):employees)
     .map((e,i)=>{ const c=getColor(employees.indexOf(e)); return `<div style="display:flex;align-items:center;gap:6px;font-size:12px;color:#4a5272"><div style="width:10px;height:10px;border-radius:3px;background:${c.bg}"></div>${nomeCurto(e.NOME)}</div>`; }).join('');
 }
-
+ 
 // ── ANIVERSÁRIO: HELPERS ──────────────────────────────────────────────────────
 function anivStatusClass(s){ return s==='FOLGA REALIZADA'?'status-realizada':s==='PENDENTE AGENDAR'?'status-pendente':'status-afazer'; }
 function anivBadge(s){
@@ -560,7 +566,7 @@ function anivBadge(s){
 }
 function getBdayMonth(s){ return s?new Date(s+'T00:00:00').getMonth():-1; }
 function fmtFolga(s){ if(!s||s==='-') return '—'; return fmtDate(s); }
-
+ 
 // ── ANIVERSÁRIO: CARDS ────────────────────────────────────────────────────────
 function renderAnivSummary(){
   const hoje=new Date(); hoje.setHours(0,0,0,0);
@@ -586,7 +592,7 @@ function renderAnivSummary(){
   if(prox) html+=`<div class="card blue"><div class="card-label">Próximo Aniversário</div><div class="card-value" style="font-size:16px">${nomeCurto(prox.NOME)}</div><div class="card-sub">${fmtBday(prox.ANIVERSARIO)} · em ${proxDias}d</div></div>`;
   document.getElementById('aniv-summary').innerHTML=html;
 }
-
+ 
 function renderAnivCards(){
   renderAnivSummary();
   document.getElementById('aniv-cards-grid').innerHTML=
@@ -603,7 +609,7 @@ function renderAnivCards(){
       </div>`;
     }).join('');
 }
-
+ 
 // ── ANIVERSÁRIO: TABELA ───────────────────────────────────────────────────────
 function renderAnivTable(){
   const search=(document.getElementById('aniv-search')?.value||'').toLowerCase();
@@ -629,7 +635,7 @@ function renderAnivTable(){
     </tr>`;
   }).join('');
 }
-
+ 
 // ── ANIVERSÁRIO: LINHA DO ANO ────────────────────────────────────────────────
 function renderAnivTimeline(){
   const MESES=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
@@ -649,20 +655,20 @@ function renderAnivTimeline(){
     </div>`;
   }).join('')}</div>`;
 }
-
+ 
 // ── INIT ─────────────────────────────────────────────────────────────────────
 const now=new Date();
 calYear=now.getFullYear();
 calMonth=now.getMonth();
-
+ 
 employees=INLINE_DATA;
 const ts='@@LAST_UPDATE@@';
 document.getElementById('last-update').textContent=ts.startsWith('@@')?'Dados embutidos':'Atualizado: '+ts;
-
+ 
 // Sidebar: mostra só ferias-subnav
 document.querySelectorAll('.sidebar-subnav').forEach(s=>s.style.display='none');
 document.getElementById('ferias-subnav').style.display='block';
-
+ 
 // Renderiza tudo e ativa timeline
 renderSummary();
 renderTimeline();
